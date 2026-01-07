@@ -1,0 +1,352 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tes Minat & Bakat</title>
+	<link rel="icon" type="image/x-icon" href="./logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Noto Serif', serif;
+      background-color: #F4E9D7;
+      color: #334443;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .quiz-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+      padding: 40px;
+      max-width: 700px;
+      width: 90%;
+      text-align: center;
+      transition: transform 0.6s ease;
+      position: relative;
+    }
+
+    .progress-container {
+      margin-bottom: 25px;
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: #2F5755;
+      border-radius: 5px;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+
+    #question-number {
+      font-size: 0.9rem;
+      margin-top: 10px;
+      color: #2F5755;
+      font-weight: 600;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
+
+    .answer-btn {
+      background: #F4E9D7;
+      border: 1px solid #2F5755;
+      color: #334443;
+      padding: 12px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      text-align: left;
+      font-size: 1rem;
+    }
+
+    .answer-btn:hover {
+      background: #E5D7C1;
+      transform: translateX(5px);
+    }
+
+    #back-btn {
+      background-color: #2F5755;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 25px;
+      transition: 0.3s ease;
+    }
+
+    #back-btn:hover {
+      transform: scale(1.05);
+      text-decoration: underline;
+    }
+
+    .slide-out {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    .slide-in {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    .show {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    #result-section {
+      display: none;
+      text-align: center;
+      animation: fadeIn 0.6s ease;
+    }
+
+    #result-title {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      color: #2F5755;
+    }
+
+    #result-desc {
+      font-size: 1rem;
+      margin-bottom: 25px;
+    }
+
+    .result-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .result-btn.primary {
+      background-color: #2F5755;
+      color: white;
+    }
+
+    .result-btn.secondary {
+      border: 2px solid #2F5755;
+      color: #2F5755;
+      background: white;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="quiz-card" id="quiz-card">
+    <div class="progress-container">
+      <div id="progress-bar" class="progress-bar"></div>
+      <div id="question-number">Pertanyaan 1 dari 20</div>
+    </div>
+
+    <h2 id="question-text">Pertanyaan akan muncul di sini</h2>
+    <div id="answer-buttons" style="display:flex; flex-direction:column; gap:15px;"></div>
+	<button id="back-btn" onclick="window.history.back()">Kembali ke halaman.</button>
+
+
+ 	</div>
+
+  <div id="result-section">
+    <h2 id="result-title"></h2>
+    <p id="result-desc"></p>
+    <a href="#" id="see-major" class="result-btn primary">Lihat Jurusan</a>
+    <a href="#" class="result-btn secondary" onclick="location.reload()">Kembali ke Beranda</a>
+  </div>
+
+  <script>
+    const questions = [
+      { text: "Kamu paling menikmati kegiatan apa?", options: [
+        { text: "Membuat karya seni seperti menggambar atau menulis.", value: "seni" },
+        { text: "Berinteraksi dan memahami orang lain.", value: "soshum" },
+        { text: "Menganalisis data atau melakukan eksperimen.", value: "saintek" }
+      ]},
+      { text: "Kamu lebih suka belajar dengan cara...", options: [
+        { text: "Visual dan praktek langsung.", value: "seni" },
+        { text: "Diskusi atau kerja kelompok.", value: "soshum" },
+        { text: "Mencoba percobaan nyata.", value: "saintek" }
+      ]},
+      { text: "Kamu merasa paling produktif ketika...", options: [
+        { text: "Menyalurkan ide kreatif.", value: "seni" },
+        { text: "Berbicara dan memimpin tim.", value: "soshum" },
+        { text: "Mengerjakan soal logika.", value: "saintek" }
+      ]},
+      { text: "Mata pelajaran yang paling kamu nikmati di sekolah adalah...", options: [
+        { text: "Seni Budaya atau Bahasa Indonesia.", value: "seni" },
+        { text: "Sosiologi atau Ekonomi.", value: "soshum" },
+        { text: "Fisika atau Biologi.", value: "saintek" }
+      ]},
+      { text: "Saat diberi tugas besar, kamu lebih suka...", options: [
+        { text: "Membuatnya terlihat menarik dan estetik.", value: "seni" },
+        { text: "Bekerjasama dan berdiskusi.", value: "soshum" },
+        { text: "Membuat sistem kerja efisien.", value: "saintek" }
+      ]},
+      { text: "Kamu paling bangga ketika...", options: [
+        { text: "Karyamu mendapat apresiasi.", value: "seni" },
+        { text: "Tim kamu berhasil mencapai target.", value: "soshum" },
+        { text: "Kamu menemukan solusi dari masalah sulit.", value: "saintek" }
+      ]},
+      { text: "Kamu merasa lebih cocok di lingkungan kerja...", options: [
+        { text: "Yang fleksibel dan bebas berekspresi.", value: "seni" },
+        { text: "Yang penuh komunikasi dan kolaborasi.", value: "soshum" },
+        { text: "Yang terstruktur dan berbasis data.", value: "saintek" }
+      ]},
+      { text: "Jika kamu punya waktu luang, kamu lebih suka...", options: [
+        { text: "Membuat sesuatu yang kreatif.", value: "seni" },
+        { text: "Berkumpul dengan teman atau komunitas.", value: "soshum" },
+        { text: "Menonton video edukatif tentang sains.", value: "saintek" }
+      ]},
+      { text: "Kamu paling cepat memahami sesuatu lewat...", options: [
+        { text: "Visual dan warna.", value: "seni" },
+        { text: "Cerita dan pengalaman orang lain.", value: "soshum" },
+        { text: "Simulasi atau eksperimen nyata.", value: "saintek" }
+      ]},
+      { text: "Kalimat mana yang paling menggambarkan kamu?", options: [
+        { text: "Kreatif dan suka berimajinasi.", value: "seni" },
+        { text: "Ramah dan mudah bergaul.", value: "soshum" },
+        { text: "Logis dan terencana.", value: "saintek" }
+      ]},
+      { text: "Kamu lebih suka proyek seperti...", options: [
+        { text: "Desain poster atau video kreatif.", value: "seni" },
+        { text: "Kampanye sosial atau penelitian perilaku.", value: "soshum" },
+        { text: "Eksperimen alat atau aplikasi.", value: "saintek" }
+      ]},
+      { text: "Saat menghadapi masalah, kamu biasanya...", options: [
+        { text: "Mencari ide baru yang belum terpikirkan.", value: "seni" },
+        { text: "Diskusi dengan orang lain.", value: "soshum" },
+        { text: "Menganalisis penyebab logisnya.", value: "saintek" }
+      ]},
+      { text: "Kamu ingin dikenal sebagai...", options: [
+        { text: "Seniman atau desainer.", value: "seni" },
+        { text: "Pemimpin atau komunikator.", value: "soshum" },
+        { text: "Peneliti atau inovator.", value: "saintek" }
+      ]},
+      { text: "Kamu lebih tertarik dengan hal-hal seperti...", options: [
+        { text: "Warna, bentuk, atau suara.", value: "seni" },
+        { text: "Perasaan dan perilaku manusia.", value: "soshum" },
+        { text: "Cara kerja alam atau mesin.", value: "saintek" }
+      ]},
+      { text: "Tempat kerja idealmu adalah...", options: [
+        { text: "Studio kreatif.", value: "seni" },
+        { text: "Kantor atau organisasi sosial.", value: "soshum" },
+        { text: "Laboratorium atau startup teknologi.", value: "saintek" }
+      ]},
+      { text: "Kamu paling suka hasil kerja yang...", options: [
+        { text: "Indah dan menarik.", value: "seni" },
+        { text: "Bermanfaat untuk banyak orang.", value: "soshum" },
+        { text: "Akurat dan efisien.", value: "saintek" }
+      ]},
+      { text: "Kamu lebih percaya diri ketika...", options: [
+        { text: "Menunjukkan karya sendiri.", value: "seni" },
+        { text: "Berbicara di depan umum.", value: "soshum" },
+        { text: "Menyelesaikan soal rumit.", value: "saintek" }
+      ]},
+      { text: "Kamu lebih suka membaca tentang...", options: [
+        { text: "Desain dan budaya.", value: "seni" },
+        { text: "Politik dan ekonomi.", value: "soshum" },
+        { text: "Teknologi dan sains.", value: "saintek" }
+      ]},
+      { text: "Kamu lebih nyaman bekerja dengan...", options: [
+        { text: "Warna dan bentuk.", value: "seni" },
+        { text: "Orang dan ide.", value: "soshum" },
+        { text: "Angka dan data.", value: "saintek" }
+      ]},
+      { text: "Kalau kamu bisa memilih, kamu ingin kuliah di jurusan yang...", options: [
+        { text: "Mengembangkan kreativitas.", value: "seni" },
+        { text: "Membahas perilaku manusia dan sosial.", value: "soshum" },
+        { text: "Meneliti teknologi dan inovasi.", value: "saintek" }
+      ]}
+    ];
+
+  let current = 0;
+  let scores = { seni: 0, soshum: 0, saintek: 0 };
+
+  const qText = document.getElementById("question-text");
+  const ansButtons = document.getElementById("answer-buttons");
+  const progressBar = document.getElementById("progress-bar");
+  const questionNum = document.getElementById("question-number");
+  const quizCard = document.getElementById("quiz-card");
+
+  function showQuestion() {
+    const q = questions[current];
+    qText.textContent = q.text;
+    ansButtons.innerHTML = "";
+    q.options.forEach(opt => {
+      const btn = document.createElement("button");
+      btn.textContent = opt.text;
+      btn.classList.add("answer-btn");
+      btn.onclick = () => selectAnswer(opt.value);
+      ansButtons.appendChild(btn);
+    });
+    questionNum.textContent = `Pertanyaan ${current + 1} dari ${questions.length}`;
+    progressBar.style.width = ((current) / questions.length) * 100 + "%";
+  }
+
+  function selectAnswer(val) {
+    scores[val]++;
+    quizCard.classList.add("slide-out");
+    setTimeout(() => {
+      current++;
+      if (current < questions.length) {
+        showQuestion();
+        quizCard.classList.remove("slide-out");
+        quizCard.classList.add("slide-in");
+        setTimeout(() => quizCard.classList.remove("slide-in"), 150);
+      } else {
+        showResult();
+      }
+    }, 250);
+  }
+
+  function showResult() {
+    quizCard.style.display = "none";
+    document.getElementById("result-section").style.display = "block";
+    const max = Object.keys(scores).reduce((a,b)=>scores[a]>scores[b]?a:b);
+    let title="", desc="", link="";
+    if (max==="seni") {
+      title="Seni & Desain";
+      desc="Kamu punya imajinasi tinggi dan peka terhadap keindahan. Dunia seni adalah ruang terbaik untuk ekspresimu.";
+      link="seni.html";
+    } else if (max==="soshum") {
+      title="Sosial & Humaniora";
+      desc="Kamu komunikatif, peka terhadap orang lain, dan berpikir kritis. Bidang sosial & kemanusiaan cocok buatmu.";
+      link="soshum.html";
+    } else {
+      title="Sains & Teknologi";
+      desc="Kamu logis, analitis, dan suka meneliti. Dunia teknologi dan eksperimen adalah tempatmu berkembang.";
+      link="saintek.html";
+    }
+
+    document.getElementById("result-title").textContent = title;
+    document.getElementById("result-desc").textContent = desc;
+    document.getElementById("see-major").setAttribute("href", link);
+  }
+
+  showQuestion();
+</script>
+<div id="result-section" style="display:none; text-align:center; margin-top:40px;">
+  <h2 id="result-title" style="color:#334443;"></h2>
+  <p id="result-desc" style="color:#334443; max-width:500px; margin:auto; line-height:1.6;"></p>
+  <div style="margin-top:20px;">
+    <a id="see-major" href="#" class="btn" style="background:#2F5755; color:#fff; padding:10px 20px; border-radius:8px; text-decoration:none;">Lihat Jurusan</a>
+    <a href="file:///E:/2024-2025/XII-1/Tugas%20Akhir/tmb.html" class="btn" style="margin-left:10px; color:#2F5755; text-decoration:underline;">Kembali ke Beranda</a>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Beranda</title>
+<link rel="icon" type="image/x-icon" href="./logo.png">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+body {
+  background-color: #f4e9d7;
+  font-family: 'Noto Serif', serif;
+  color: #334443;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-navbar {
+  background-color: #F4E9D7 !important;
+  font-family: 'Noto Serif', serif !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-navbar .navbar-brand {
+  color: #2F5755 !important;
+  font-weight: 700;
+}
+
+.custom-navbar .nav-link {
+  color: #2F5755 !important;
+  transition: all .18s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  text-decoration: underline;
+  color: #2F5755 !important;
+}
+
+.custom-navbar .dropdown-menu {
+  background-color: #F4E9D7;
+  border: none;
+}
+
+.custom-navbar .dropdown-item {
+  color: #2F5755 !important;
+}
+
+.custom-navbar .dropdown-item:hover {
+  background-color: #e7d9c5;
+  text-decoration: underline;
+}
+
+
+.carousel-item img {
+  max-width: 1200px;
+  margin: 50px auto;       
+  border-radius: 18px;
+  overflow: hidden;
+  height: 500px;           
+  object-fit: cover;       
+}
+
+.carousel-caption {
+  background: rgba(0,0,0,0.55);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.carousel-caption h3 {
+  font-weight: 700;
+}
+
+.carousel-caption p {
+  font-size: 1rem;
+  margin: 5px 0 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 50%;
+  padding: 15px;
+}
+</style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm custom-navbar">
+  <a class="navbar-brand" href="index.html">
+    <img src="./logo.png" alt="logo" style="width:40px;">
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Jurusan</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="soshum.html">Sosial dan Humaniora</a>
+          <a class="dropdown-item" href="saintek.html">Sains dan Teknologi</a>
+          <a class="dropdown-item" href="seni.html">Seni dan Desain</a>
+        </div>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="tmb.html">Tes Minat Bakat</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <a href="https://itb.ac.id/berita/lebih-dari-200-ribu-pengunjung-padati-pasar-seni-itb-2025-dihadiri-wali-kota-bandung-hingga-menteri-pariwisata/62954" target="_blank">
+          <img src="./carousel/20251019-PSITB-8.jpg" alt="Pasar Seni ITB 2025" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>Pasar Seni ITB 2025 Berhasil Digelar</h3>
+            <p>Lebih dari 200 ribu pengunjung padati Pasar Seni ITB 2025, dihadiri wali Kota Bandung hingga Menteri Pariwisata.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <a href="https://www.instagram.com/p/DQn7l9nDfO-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+          <img src="./carousel/photomatics%20x%20ui.png" alt="Lomba Photomatics x UI" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>Lomba Desain Photomatics x @uistore_id</h3>
+            <p>My Faculty, My Identity kini terbuka untuk UMUM!</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <a href="https://news.detik.com/berita/d-8201428/hasil-tka-sma-2025-kapan-diumumkan-cek-lagi-jadwalnya" target="_blank">
+          <img src="./carousel/1475850653.webp" alt="Tes Kompetensi Akademik SMA 2025" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>Hasil TKA SMA 2025 Kapan Diumumkan?</h3>
+            <p>Pelaksanaan Tes Kompetensi Akademik (TKA) SMA 2025 telah selesai. Kini saatnya menantikan hasil seleksi!</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="carousel-item">
+        <a href="https://www.brainacademy.id/blog/informasi-utbk-snbt" target="_blank">
+          <img src="./carousel/d30019e8-b3f8-438d-96a7-feffde3620c2.png" alt="Info UTBK SNBT 2026" class="d-block w-100">
+          <div class="carousel-caption">
+            <h3>UTBK SNBT 2026</h3>
+            <p>Yuk, simak informasi ter-update UTBK SNBT 2026. Mulai dari jadwal, syarat, ketentuan, materi ujian, hingga ketentuan barunya berikut ini.</p>
+          </div>
+        </a>
+      </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+</div>
+
+	
+<style>
+.intro-section {
+  padding: 60px 10%;
+}
+.intro-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 40px 60px;
+}
+.intro-text {
+  font-family: 'Noto Serif', serif !important;
+  flex: 1;
+  min-width: 300px;
+  margin-right: 40px;
+}
+.intro-text h2 {
+	font-family: 'Noto Serif', serif !important;
+  	font-weight: 700;
+  	color: #2F5755;
+  	margin-bottom: 20px;
+}
+.intro-text span {
+	font-family: 'Noto Serif', serif !important;
+  	color: #426E6D;
+}
+.intro-text p {
+	font-family: 'Noto Serif', serif !important;
+  	line-height: 1.8;
+  	color: #334443;
+}
+.intro-img img {
+	  width: 350px;
+	  max-width: 100%;
+	  border-radius: 10px;
+}
+
+.vm-section {
+  	padding: 60px 10%;
+}
+.vm-content {
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	  flex-wrap: wrap-reverse;
+	  background-color: #fff;
+	  border-radius: 20px;
+	  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+	  padding: 40px 60px;
+}
+.vm-text {
+		font-family: 'Noto Serif', serif !important;
+		flex: 1;
+	  	min-width: 300px;
+	  	margin-left: 40px;
+}
+.vm-text h2 {
+	font-family: 'Noto Serif', serif !important;
+  font-weight: 700;
+  color: #2F5755;
+  margin-bottom: 20px;
+}
+.vm-text h4 {
+	font-family: 'Noto Serif', serif !important;
+  color: #426E6D;
+  margin-top: 20px;
+}
+.vm-text p {
+	font-family: 'Noto Serif', serif !important;
+  color: #334443;
+}
+.vm-text ul {
+	vfont-family: 'Noto Serif', serif !important;
+  line-height: 1.8;
+  padding-left: 20px;
+  color: #334443;
+}
+.vm-img img {
+  width: 350px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+</style>
+
+<section class="intro-section">
+  <div class="intro-content">
+    <div class="intro-text">
+      <h2>Selamat Datang di <span>PetaKuliah</span></h2>
+      <p> Sedang bingung menentukan jurusan dan kampus yang tepat untuk masa depan? Jangan khawatir, Anda tidak sendiri. PetaKuliah hadir sebagai platform digital terpercaya yang membantu Anda menemukan jurusan dan perguruan tinggi sesuai dengan minat, bakat, dan tujuan karier. Melalui fitur tes minat dan bakat, informasi lengkap tentang kampus, serta panduan pendaftaran, kami menyediakan segala yang Anda butuhkan untuk membuat keputusan yang tepat. Dengan akses mudah dan informasi yang akurat, PetaKuliah berkomitmen mendukung perjalanan pendidikan Anda menuju kesuksesan. Mari mulai langkah pertama menuju masa depan yang cerah bersama PetaKuliah.
+      </p>
+    </div>
+    <div class="intro-img">
+      <img src="./beranda.webp" alt="Ilustrasi Pendidikan">
+    </div>
+  </div>
+</section>
+
+<section class="vm-section">
+  <div class="vm-content">
+    <div class="vm-img">
+      <img src="./carousel/iconvisimisi.png" alt="Ilustrasi Belajar">
+    </div>
+    <div class="vm-text">
+      <h2>Visi & Misi</h2>
+      <h4>Visi</h4>
+      <p>
+        Menjadi platform edukasi digital terpercaya yang membantu generasi muda Indonesia menemukan jurusan dan kampus terbaik sesuai potensi, minat, dan masa depan mereka.
+      </p>
+      <h4>Misi</h4>
+      <ul>
+        <li><strong>Menyediakan informasi lengkap, akurat, dan mudah</strong> dipahami tentang jurusan, program studi, serta kampus di seluruh Indonesia.</li>
+        <li><strong>Membantu siswa mengenali minat dan bakat mereka</strong> melalui tes psikologi, kuisioner minat karier, dan panduan reflektif.</li>
+        <li><strong>Mengembangkan fitur interaktif dan personalisasi</strong> agar setiap pengguna mendapatkan rekomendasi jurusan dan kampus yang paling sesuai.</li>
+        <li><strong>Membangun ekosistem edukatif yang kolaboratif</strong>, melibatkan guru BK, mahasiswa, alumni, dan praktisi pendidikan.</li>
+		<li><strong>Mendorong pemerataan akses informasi pendidikan tinggi</strong> bagi pelajar di daerah terpencil melalui platform yang ringan dan mobile-friendly..</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer style="background-color: #D97D55; color: white; font-family: 'Noto Serif', serif; padding: 50px 60px;">
+  <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+
+    <div style="width: 300px; margin-bottom: 20px;">
+      <h4>PetaKuliah</h4>
+      <p>
+        Media informasi pendidikan interaktif untuk membantu siswa menemukan
+        jurusan yang sesuai dengan minat dan bakat mereka.
+      </p>
+    </div>
+
+    <div style="width: 300px; margin-bottom: 20px;">
+      <h4>BANDUNG</h4>
+      <p>
+        +62 812-3456-7890<br>
+        SMA Santa Maria 1 Bandung<br>
+        Jl. Bengawan No.6, Cihapit,<br>
+		Kec. Bandung Wetan, Kota Bandung,<br>
+		Jawa Barat 40114
+      </p>
+    </div>
+
+    <div style="width: 300px; margin-bottom: 20px;">
+      <h4>IKUTI KAMI</h4>
+      <a href="https://www.instagram.com/aimeeyy__/" style="margin-right: 10px;"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="24"></a>
+    </div>
+  </div>
+
+  <p style="text-align: center; margin-top: 40px; font-size: 14px;">
+    © 2025 PetaKuliah | Dibuat oleh Gwenda Aimee Winarno
+  </p>
+</footer>
+	
+</body>
+</html>

@@ -1,0 +1,985 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JURUSAN - Seni dan Desain</title>
+<link rel="icon" type="image/x-icon" href="./logo.png">
+<style type="text/css">
+body {
+    background-color: #F4E9D7;
+    font-family: Noto-Serif;
+    color: #334443;
+}
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+ <style>
+    .custom-navbar {
+      background-color: #F4E9D7 !important;
+	  font-family: 'Noto Serif', serif !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .custom-navbar .navbar-brand {
+      color: #2F5755 !important;
+      font-weight: 700;
+    }
+
+    .custom-navbar .nav-link {
+      color: #2F5755 !important;
+      transition: all .18s ease;
+    }
+
+    .custom-navbar .nav-link:hover {
+      text-decoration: underline;
+      color: #2F5755 !important;
+    }
+
+    .custom-navbar .dropdown-menu {
+      background-color: #F4E9D7;
+      border: none;
+    }
+
+    .custom-navbar .dropdown-item {
+      color: #2F5755 !important;
+    }
+
+    .custom-navbar .dropdown-item:hover {
+      background-color: #e7d9c5;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm custom-navbar">
+  <a class="navbar-brand" href="index.html">
+    <img src="./logo.png" alt="logo" style="width:40px;">
+  </a>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Jurusan</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="soshum.html">Sosial dan Humaniora</a>
+          <a class="dropdown-item" href="saintek.html">Sains dan Teknologi</a>
+          <a class="dropdown-item" href="seni.html">Seni dan Desain</a>
+        </div>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="tmb.html">Tes Minat Bakat</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">Tentang Kami</a></li>
+    </ul>
+  </div>
+  </nav>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F4E9D7;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+
+    .judul-halaman {
+      text-align: center;
+      color: #334443;
+      font-size: 60px;
+      margin: 40px 0;
+      font-family: "Noto Serif", serif;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      width: 380px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .card-text {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .btn-primary {
+      background-color: #2F5755;
+      color: #F4E9D7;
+      border: none;
+    }
+	
+	  .modal-header {
+      background-color: #2F5755;
+    }
+
+    .modal-header .modal-title,
+    .modal-header .btn-close {
+      color: white;
+    }
+
+    .modal-header .btn-close {
+      filter: invert(1);
+    }
+	  
+    .btn-primary:hover {
+      background-color: #264a49;
+    }
+	  
+	.btn-primary:active,
+	.btn-primary.active,
+	.show > .btn-primary.dropdown-toggle {
+  		background-color: #1f3d3c !important;
+  		border-color: #1f3d3c !important;
+}
+
+	.btn-primary:focus,
+	.btn-primary:active:focus {
+	  background-color: #1f3d3c !important;
+	  border-color: #1f3d3c !important;
+	  box-shadow: none !important;
+	  outline: none !important;
+	}
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <img src="picseni.png" alt="Banner Jurusan">
+  </div>
+
+  <h1 class="judul-halaman">Daftar Jurusan</h1>
+
+<body>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<div class="wrapper">
+    <div class="card-container">
+		
+<div class="card">
+  <img src="./seni/seni%20rupa.jpg" alt="Seni Rupa" width="720" height="473">
+  <div class="card-body">
+    <h4 class="card-title">Seni Rupa</h4>
+    <p class="card-text">Program studi yang mendalami penciptaan, teori, dan sejarah seni visual melalui berbagai media seperti lukis, patung, grafis, hingga instalasi, dengan tujuan mengembangkan kreativitas, kemampuan teknis, dan pemikiran kritis untuk menghasilkan karya orisinal dan profesional.</p>
+    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSeniRupa">Lihat Kampus</a>
+  </div>
+</div>
+
+<div class="modal fade" id="modalSeniRupa" tabindex="-1" aria-labelledby="modalSeniRupaLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">      
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalSeniRupaLabel">Seni Rupa</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <p><strong>Deskripsi:</strong> Program studi yang mendalami penciptaan, teori, dan sejarah seni visual melalui berbagai media seperti lukis, patung, grafis, hingga instalasi, dengan tujuan mengembangkan kreativitas, kemampuan teknis, dan pemikiran kritis untuk menghasilkan karya orisinal dan profesional.</p>
+
+        <p><strong>Prospek kerja:</strong></p>
+        <ul>
+          <li><strong>Seniman / Perupa Profesional</strong> – Menjadi pelukis, pematung, pembuat instalasi, atau seniman visual yang berkarya secara mandiri maupun bekerja sama dengan galeri dan museum.</li>
+          <li><strong>Desainer Grafis / Ilustrator</strong> – Membuat desain visual untuk media digital, periklanan, penerbitan, atau perusahaan kreatif.</li>
+          <li><strong>Kurator dan Pengelola Galeri</strong> – Mengelola pameran, galeri seni, dan event seni rupa baik di tingkat lokal maupun internasional.</li>
+          <li><strong>Fotografer / Videografer Artistik</strong> – Mengembangkan karya foto dan video dengan pendekatan artistik untuk media, brand, atau pameran.</li>
+          <li><strong>Art Director / Creative Director</strong> – Mengatur konsep visual dan arah artistik dalam produksi film, iklan, animasi, atau konten kreatif.</li>
+          <li><strong>Dosen / Peneliti Seni</strong> – Mengajar dan melakukan penelitian dalam bidang seni rupa, sejarah seni, atau teori estetika.</li>
+          <li><strong>Konseptor dan Desainer Produk Seni</strong> – Menciptakan karya kriya, kerajinan, dan desain interior dengan nilai seni tinggi untuk pasar lokal maupun ekspor.</li>
+          <li><strong>Animator / Digital Artist</strong> – Mengembangkan karya seni berbasis teknologi seperti animasi, 3D modeling, atau visual effect (VFX).</li>
+          <li><strong>Wirausaha Kreatif (Creativepreneur)</strong> – Mendirikan studio seni, galeri, atau bisnis kreatif seperti art merchandise, fashion art, atau art café.</li>
+          <li><strong>Kurator Budaya dan Event Organizer Seni</strong> – Menjadi pengelola kegiatan budaya, festival seni, dan pameran baik untuk pemerintah maupun swasta.</li>
+        </ul>
+
+        <p><strong>Perguruan Tinggi Negeri:</strong></p>
+        <ul>
+          <li>Institut Seni Indonesia (ISI) Yogyakarta</li>
+          <li>Institut Seni Indonesia (ISI) Surakarta</li>
+          <li>Institut Seni Indonesia (ISI) Denpasar</li>
+          <li>Institut Teknologi Bandung (ITB)</li>
+          <li>Universitas Negeri Jakarta (UNJ)</li>
+          <li>Universitas Negeri Semarang (UNNES).</li>
+          <li>Universitas Sebelas Maret (UNS)</li>
+          <li>Universitas Negeri Yogyakarta (UNY)</li>
+          <li>Universitas Negeri Surabaya (UNESA)</li>
+          <li>Universitas Negeri Malang (UM)</li>
+          <li>Universitas Pendidikan Indonesia (UPI)</li>
+          <li>Universitas Negeri Medan (UNIMED)</li>
+          <li>Universitas Negeri Makassar (UNM)</li>
+          <li>Universitas Negeri Padang (UNP)</li>
+        </ul>
+
+        <p><strong>Perguruan Tinggi Swasta:</strong></p>
+        <ul>
+          <li>Universitas Trisakti</li>
+          <li>Universitas Tarumanagara (UNTAR)</li>
+          <li>Universitas Kristen Maranatha (UKM)</li>
+          <li>Universitas Pelita Harapan (UPH)</li>
+          <li>Universitas Multimedia Nusantara (UMN)</li>
+          <li>Universitas Bina Nusantara (BINUS University)</li>
+          <li>Universitas Ciputra Surabaya (UC)</li>
+          <li>Universitas Esa Unggul (UEU)</li>
+          <li>Universitas Katolik Parahyangan (UNPAR)</li>
+          <li>Universitas Surabaya (UBAYA)</li>
+        </ul>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+ <img src="./seni/seni%20musik.jpg" alt="Seni Musik" width="720" height="473">
+  <div class="card-body">
+    <h4 class="card-title">Seni Musik</h4>
+    <p class="card-text">Seni Musik: program studi yang mempelajari musik secara mendalam, mencakup teori musik, sejarah musik, analisis musik, praktik instrumen (seperti piano, alat musik tiup, gesek), teknik vokal, serta komposisi musik dan produksi musik.</p>
+    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMUSIK">Lihat Kampus</a>
+  </div>
+</div>
+
+<div class="modal fade" id="modalMUSIK" tabindex="-1" aria-labelledby="modalMUSIKLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">      
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalMUSIKLabel">Seni Musik</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Deskripsi:</strong> Seni Musik: program studi yang mempelajari musik secara mendalam, mencakup teori musik, sejarah musik, analisis musik, praktik instrumen (seperti piano, alat musik tiup, gesek), teknik vokal, serta komposisi musik dan produksi musik.</p>
+
+        <p><strong>Prospek Kerja Lulusan Seni Musik</strong></p>
+        <ul>
+          <li><strong>Musisi / Instrumentalis / Vokalis Profesional</strong><br> Menjadi pemain musik, penyanyi, atau pengiring profesional di panggung, studio, atau orkestra.</li>
+          <li><strong>Komponis / Pencipta Lagu</strong><br> Menciptakan musik dan lagu untuk penyanyi, film, iklan, dan permainan video.</li>
+          <li><strong>Produser Musik / Sound Engineer</strong><br> Bekerja di studio rekaman untuk memproduksi, mengedit, dan mengaransemen musik dengan teknologi digital.</li>
+          <li><strong>Conductor / Pimpinan Ansambel Musik</strong><br> Memimpin orkestra, band, paduan suara, atau kelompok musik profesional.</li>
+          <li><strong>Guru / Dosen Musik</strong><br> Mengajar teori musik, alat musik, dan komposisi di sekolah, lembaga kursus, atau universitas.</li>
+          <li><strong>Peneliti dan Kritikus Musik</strong><br> Meneliti perkembangan musik, budaya, dan teknologi musik modern.</li>
+          <li><strong>Music Director / Art Director</strong><br> Mengatur konsep dan aransemen musik dalam produksi pertunjukan, konser, teater, atau film.</li>
+          <li><strong>Music Arranger / Orchestrator</strong><br> Mengatur ulang komposisi musik untuk berbagai jenis alat musik atau genre tertentu.</li>
+          <li><strong>Music Therapist (Terapis Musik)</strong><br> Menggunakan musik untuk membantu pemulihan emosional dan psikologis pasien di bidang kesehatan mental.</li>
+          <li><strong>Wirausaha dan Entertainer Musik</strong><br> Mendirikan studio musik, label rekaman, atau agensi musik yang menangani produksi dan distribusi karya musisi.</li>
+        </ul>
+
+        <p><strong>Kampus Negeri (PTN) yang Memiliki Jurusan Seni Musik</strong></p>
+        <ul>
+          <li>Institut Seni Indonesia (ISI) Yogyakarta</li>
+          <li>Institut Seni Indonesia (ISI) Surakarta</li>
+          <li>Institut Seni Indonesia (ISI) Denpasar</li>
+          <li>Institut Kesenian Jakarta (IKJ)</li>
+          <li>Universitas Negeri Yogyakarta (UNY)</li>
+          <li>Universitas Negeri Semarang (UNNES)</li>
+          <li>Universitas Pendidikan Indonesia (UPI)</li>
+          <li>Universitas Negeri Surabaya (UNESA)</li>
+          <li>Universitas Negeri Medan (UNIMED)</li>
+          <li>Universitas Negeri Padang (UNP)</li>
+          <li>Universitas Negeri Makassar (UNM)</li>
+          <li>Universitas Negeri Manado (UNIMA)</li>
+          <li>Universitas Sebelas Maret (UNS)</li>
+          <li>Institut Seni Budaya Indonesia (ISBI) Bandung</li>
+          <li>Institut Seni Budaya Indonesia (ISBI) Aceh / Tanah Papua / Kalimantan Timur</li>
+        </ul>
+
+        <p><strong>Kampus Swasta (PTS) yang Memiliki Jurusan Seni Musik</strong></p>
+        <ul>
+          <li>Universitas Pelita Harapan (UPH)</li>
+          <li>Universitas Kristen Petra (UK Petra)</li>
+          <li>Universitas Kristen Satya Wacana (UKSW)</li>
+          <li>Universitas Advent Indonesia (UNAI)</li>
+          <li>Universitas Katolik Parahyangan (UNPAR</li>
+          <li>Universitas Ciputra Surabaya (UC)</li>
+          <li>Universitas Multimedia Nusantara (UMN)</li>
+          <li>Universitas Bina Nusantara (BINUS University)</li>
+          <li>Universitas Trisakti.</li>
+          <li>Universitas Pembangunan Jaya (UPJ)</li>
+        </ul>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card">
+ <img src="./seni/seni%20tari.jpg" alt="Seni Tari" width="720" height="473">
+  <div class="card-body">
+    <h4 class="card-title">Seni Tari</h4>
+    <p class="card-text">Seni Tari: program studi yang mendalami teori dan praktik seni tari, mulai dari gerakan, sejarah, hingga koreografi, baik tari tradisional maupun modern</p>
+    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTARI">Lihat Kampus</a>
+  </div>
+</div>
+
+<div class="modal fade" id="modalTARI" tabindex="-1" aria-labelledby="modalTARILabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">      
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTARILabel">Seni Tari</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Deskripsi:</strong> Seni Tari: program studi yang mendalami teori dan praktik seni tari, mulai dari gerakan, sejarah, hingga koreografi, baik tari tradisional maupun modern</p>
+
+        <p><strong>Prospek Kerja Lulusan Seni Tari</strong></p>
+        <ul>
+          <li><strong>Penari Profesional</strong><br> Menjadi penampil dalam pertunjukan tari tradisional, modern, atau kontemporer di panggung nasional maupun internasional.</li>
+          <li><strong>Koreografer / Pencipta Tari</strong><br> Merancang dan menciptakan karya tari baru untuk pertunjukan, teater, film, dan festival seni.</li>
+          <li><strong>Guru / Dosen Tari</strong><br> Mengajar teknik tari, sejarah tari, atau koreografi di sekolah, sanggar, maupun universitas.</li>
+          <li><strong>Manajer Produksi atau Event Seni</strong><br> Mengelola acara kesenian, festival tari, pertunjukan budaya, atau kegiatan pariwisata berbasis seni.</li>
+          <li><strong>Peneliti dan Kritikus Tari</strong><br> Meneliti perkembangan seni tari, budaya daerah, dan dampak sosial seni pertunjukan.</li>
+          <li><strong>Pegawai Dinas Kebudayaan dan Pariwisata</strong><br> Mengembangkan dan melestarikan kesenian daerah melalui program budaya dan event nasional.</li>
+          <li><strong>Art Performer di Dunia Hiburan</strong><br> Bekerja di dunia film, televisi, atau video klip sebagai penari dan koreografer.</li>
+          <li><strong>Wirausaha Seni / Pemilik Sanggar Tari</strong><br> Membuka sanggar tari, sekolah tari, atau studio seni pertunjukan sendiri.</li>
+          <li><strong>Konsultan Budaya dan Seni Pertunjukan</strong><br> Menjadi pengarah artistik atau penasihat untuk proyek-proyek seni dan budaya.</li>
+          <li><strong>Content Creator Seni Tari</strong><br> Mengembangkan karya tari di platform digital seperti YouTube, TikTok, atau media sosial untuk promosi budaya.</li>
+        </ul>
+
+        <p><strong>Kampus Negeri (PTN) yang Memiliki Jurusan Seni Tari</strong></p>
+        <ul>
+          <li>Institut Seni Indonesia (ISI) Yogyakarta</li>
+          <li>Institut Seni Indonesia (ISI) Surakarta</li>
+          <li>Institut Seni Indonesia (ISI) Denpasar</li>
+          <li>Institut Kesenian Jakarta (IKJ)</li>
+          <li>Institut Seni Budaya Indonesia (ISBI) Bandung</li>
+          <li>Institut Seni Budaya Indonesia (ISBI) Aceh</li>
+          <li>Institut Seni Budaya Indonesia (ISBI) Tanah Papua</li>
+          <li>Universitas Negeri Yogyakarta (UNY)</li>
+          <li>Universitas Negeri Semarang (UNNES).</li>
+          <li>Universitas Negeri Surabaya (UNESA)</li>
+          <li>Universitas Pendidikan Indonesia (UPI)</li>
+          <li>Universitas Negeri Makassar (UNM)</li>
+          <li>Universitas Negeri Padang (UNP)</li>
+          <li>Universitas Sebelas Maret (UNS)</li>
+          <li>Universitas Negeri Medan (UNIMED)</li>
+        </ul>
+
+        <p><strong>Kampus Swasta (PTS) yang Memiliki Jurusan Seni Tari</strong></p>
+        <ul>
+          <li>Universitas Kristen Satya Wacana (UKSW)</li>
+          <li>Universitas Pelita Harapan (UPH)</li>
+          <li>Universitas Ciputra Surabaya (UC)</li>
+          <li>Universitas Esa Unggul (UEU)</li>
+          <li>Universitas Pembangunan Jaya (UPJ)</li>
+          <li>Universitas Katolik Parahyangan (UNPAR)</li>
+          <li>Universitas Trisakti</li>
+          <li>Institut Musik Indonesia (IMI)</li>
+          <li>Sekolah Tinggi Kesenian Wilwatikta Surabaya (STKW)</li>
+        </ul>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+		
+<div class="card">
+ <img src="./seni/seni%20teater.jpg" alt="Seni Teater" width="720" height="473">
+  <div class="card-body">
+    <h4 class="card-title">Seni Teater</h4>
+    <p class="card-text">Seni Teater: program studi yang mendalami seni pertunjukan panggung, meliputi aspek seperti teknik akting, penyutradaraan, penulisan naskah, desain artistik, serta sejarah dan analisis karya teater</p>
+    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTEATER">Lihat Kampus</a>
+  </div>
+</div>
+
+<div class="modal fade" id="modalTEATER" tabindex="-1" aria-labelledby="modalTEATERLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">      
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTEATERLabel">Seni Teater</h5> 
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Deskripsi:</strong> Seni Teater: program studi yang mendalami seni pertunjukan panggung, meliputi aspek seperti teknik akting, penyutradaraan, penulisan naskah, desain artistik, serta sejarah dan analisis karya teater</p>
+
+        <p><strong>Prospek Kerja Lulusan Seni Teater</strong></p>
+        <ul>
+          <li><strong>Aktor / Aktris Teater, Film, dan Televisi</strong><br> Menjadi pemain dalam berbagai pertunjukan, mulai dari panggung teater hingga layar kaca dan film.</li>
+          <li><strong>Sutradara (Director)</strong><br> Mengarahkan proses produksi dan pertunjukan teater, film pendek, sinetron, atau drama musikal.</li>
+          <li><strong>Penulis Naskah / Skenario (Scriptwriter / Playwright)</strong><br> Menulis naskah drama, film, atau pertunjukan panggung dengan teknik dramaturgi dan storytelling yang kuat.</li>
+          <li><strong>Produser dan Manajer Produksi Seni Pertunjukan</strong><br> Mengelola produksi teater, konser, festival budaya, atau event hiburan dari sisi bisnis dan organisasi.</li>
+          <li><strong>Tata Artistik (Stage Designer / Art Director)</strong><br> Mendesain tata panggung, properti, cahaya, dan suasana visual untuk mendukung cerita pertunjukan.</li>
+          <li><strong>Pendidikan dan Pelatihan Teater</strong><br> Menjadi guru seni teater di sekolah atau dosen di perguruan tinggi seni.</li>
+          <li><strong>Kritikus dan Peneliti Seni Pertunjukan</strong><br> Menulis ulasan, melakukan penelitian tentang perkembangan seni teater dan budaya pertunjukan di masyarakat.</li>
+          <li><strong>Pegawai di Dinas Kebudayaan dan Pariwisata</strong><br> Terlibat dalam pelestarian budaya, festival seni daerah, dan diplomasi budaya.</li>
+          <li><strong>Kreator Konten Seni dan Hiburan Digital</strong><br> Mengembangkan karya drama, monolog, atau pertunjukan virtual di media sosial dan platform streaming.</li>
+          <li><strong>Wirausaha Seni (Pemilik Teater / Komunitas Seni)</strong><br> Mendirikan kelompok teater, studio akting, atau lembaga pelatihan seni pertunjukan.</li>
+        </ul>
+
+        <p><strong>Kampus Negeri (PTN) yang Memiliki Jurusan Seni Teater</strong></p>
+        <ul>
+          <li>Institut Kesenian Jakarta (IKJ)</li>
+          <li>Institut Seni Indonesia (ISI) Yogyakarta</li>
+          <li>Institut Seni Indonesia (ISI) Surakarta</li>
+          <li>Institut Seni Indonesia (ISI) Denpasar</li>
+          <li>Institut Seni Budaya Indonesia (ISBI) Bandung</li>
+          <li>Institut Seni Budaya Indonesia (ISBI)</li>
+          <li>Institut Seni Budaya Indonesia (ISBI) Tanah Papua</li>
+          <li>Universitas Negeri Yogyakarta (UNY)</li>
+          <li>Universitas Negeri Semarang (UNNES)</li>
+          <li>Universitas Negeri Surabaya (UNESA)</li>
+          <li>Universitas Negeri Makassar (UNM)</li>
+          <li>Universitas Negeri Padang (UNP)</li>
+        </ul>
+
+        <p><strong>Kampus Swasta (PTS) yang Memiliki Jurusan Seni Teater</strong></p>
+        <ul>
+          <li>Universitas Pelita Harapan (UPH)</li>
+          <li>Universitas Ciputra Surabaya (UC)</li>
+          <li>Universitas Kristen Satya Wacana (UKSW)</li>
+          <li>Universitas Katolik Parahyangan (UNPAR)</li>
+          <li>Universitas Esa Unggul (UEU)</li>
+          <li>Universitas Pembangunan Jaya (UPJ)</li>
+          <li>Sekolah Tinggi Kesenian Wilwatikta (STKW) Surabaya.</li>
+          <li>Institut Musik Indonesia (IMI)</li>
+          <li>Institut Seni Budaya Indonesia (ISBI) Kalimantan Timur</li>
+        </ul>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+ <img src="./seni/dkv.jpg" alt="Desain Komunikasi Visual" width="720" height="473">
+  <div class="card-body">
+    <h4 class="card-title">Desain Komunikasi Visual (DKV)</h4>
+    <p class="card-text">Desain Komunikasi Visual (DKV): proses kreatif untuk menyampaikan pesan melalui elemen-elemen visual seperti gambar, warna, dan tipografi, dengan tujuan agar pesan dapat dipahami secara efektif dan komunikatif oleh audiens</p>
+    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDKV">Lihat Kampus</a>
+  </div>
+</div>
+
+<div class="modal fade" id="modalDKV" tabindex="-1" aria-labelledby="modalDKVLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">      
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalDKVLabel">Desain Komunikasi Visual (DKV)</h5> 
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Deskripsi:</strong> Desain Komunikasi Visual (DKV): proses kreatif untuk menyampaikan pesan melalui elemen-elemen visual seperti gambar, warna, dan tipografi, dengan tujuan agar pesan dapat dipahami secara efektif dan komunikatif oleh audiens</p>
+
+        <p><strong>Prospek Kerja Lulusan DKV</strong></p>
+        <ul>
+          <li><strong>Graphic Designer</strong><br> Mendesain media visual seperti poster, brosur, majalah, banner digital, dan kemasan produk.</li>
+          <li><strong>Art Director / Creative Director</strong><br> Mengatur arah kreatif dalam proyek iklan, branding, atau kampanye digital.</li>
+          <li><strong>Illustrator Profesional</strong><br> Membuat ilustrasi untuk buku, komik, animasi, media sosial, atau produk komersial.</li>
+          <li><strong>Animator / Motion Graphic Designer</strong><br> Mengembangkan animasi 2D/3D dan efek visual untuk film, iklan, dan media digital.</li>
+          <li><strong>Branding & Visual Identity Specialist</strong><br> Menciptakan identitas visual merek (brand identity), logo, dan strategi komunikasi visual.</li>
+          <li><strong>UI/UX Designer</strong><br> Mendesain tampilan dan pengalaman pengguna aplikasi atau website agar menarik dan mudah digunakan.</li>
+          <li><strong>Fotografer / Videografer Kreatif</strong><br> Menghasilkan konten visual untuk media promosi, digital marketing, dan hiburan.</li>
+          <li><strong>Content Creator / Visual Storyteller</strong><br> Membuat konten kreatif visual di platform seperti YouTube, Instagram, TikTok, atau perusahaan media.</li>
+          <li><strong>Desainer Iklan dan Periklanan Digital</strong><br> Merancang konsep iklan visual dan multimedia untuk perusahaan, brand, atau agensi.</li>
+          <li><strong>Entrepreneur Kreatif</strong><br> Membangun studio desain, agensi kreatif, brand fashion, atau bisnis berbasis desain visual.</li>
+        </ul>
+
+        <p><strong>Kampus Negeri (PTN)</strong></p>
+        <ul>
+          <li>Institut Teknologi Bandung (ITB)</li>
+          <li>Institut Kesenian Jakarta (IKJ)</li>
+          <li>Institut Seni Indonesia (ISI) Yogyakarta</li>
+          <li>Institut Seni Indonesia (ISI) Denpasar</li>
+          <li>Institut Seni Indonesia (ISI) Surakarta</li>
+          <li>Institut Seni Budaya Indonesia (ISBI) Bandung</li>
+          <li>Universitas Negeri Malang (UM)</li>
+          <li>Universitas Negeri Semarang (UNNES)</li>
+          <li>Universitas Sebelas Maret (UNS)</li>
+          <li>Universitas Negeri Makassar (UNM)</li>
+          <li>Universitas Negeri Surabaya (UNESA)</li>
+          <li>Universitas Negeri Padang (UNP</li>
+          <li>Universitas Sumatera Utara (USU)</li>
+        </ul>
+
+        <p><strong>Kampus Swasta (PTS)</strong></p>
+        <ul>
+          <li>Universitas Tarumanagara (UNTAR)</li>
+          <li>Universitas Trisakti.</li>
+          <li>Universitas Pelita Harapan (UPH)</li>
+          <li>Universitas Bina Nusantara (Binus University)</li>
+          <li>Universitas Multimedia Nusantara (UMN).</li>
+          <li>Universitas Kristen Petra (UK Petra)</li>
+          <li>Universitas Ciputra Surabaya (UC)</li>
+          <li>Universitas Esa Unggul (UEU)</li>
+          <li>Universitas Komputer Indonesia (UNIKOM)</li>
+          <li>Universitas Kristen Maranatha (UKM)</li>
+          <li>Universitas Dian Nuswantoro (UDINUS)</li>
+          <li>Universitas Pembangunan Jaya (UPJ)</li>
+          <li>Universitas Mercu Buana (UMB)</li>
+          <li>LSPR Institute of Communication and Business</li>
+        </ul>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+		<div class="card">
+ <img src="./seni/desain%20interior.jpg" alt="Desain Interior" width="720" height="473">
+  <div class="card-body">
+    <h4 class="card-title">Desain Interior</h4>
+    <p class="card-text">Desain Interior: disiplin yang merencanakan, merancang, dan menata elemen dalam suatu ruangan untuk memaksimalkan fungsi, estetika, keamanan, dan kenyamanan penghuni</p>
+    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalINTERIOR">Lihat Kampus</a>
+  </div>
+</div>
+
+<div class="modal fade" id="modalINTERIOR" tabindex="-1" aria-labelledby="modalINTERIORLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">      
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalINTERIORLabel">Desain Interior</h5> 
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Deskripsi:</strong> Desain Interior: disiplin yang merencanakan, merancang, dan menata elemen dalam suatu ruangan untuk memaksimalkan fungsi, estetika, keamanan, dan kenyamanan penghuni</p>
+
+        <p><strong>Prospek Kerja Lulusan Desain Interior</strong></p>
+        <ul>
+          <li><strong>Desainer Interior Profesional</strong><br> Merancang interior rumah, apartemen, kantor, hotel, kafe, atau ruang publik lainnya sesuai konsep dan kebutuhan klien.</li>
+          <li><strong>Konsultan Desain Ruang</strong><br> Memberikan saran profesional tentang tata ruang, pencahayaan, material, dan warna untuk proyek bangunan.</li>
+          <li><strong>Perancang Furnitur dan Produk Interior</strong><br> Mendesain perabot dan dekorasi sesuai tren, fungsi, dan kebutuhan estetika.</li>
+          <li><strong>Visual Merchandiser</strong><br> Menata tampilan interior toko atau butik agar menarik perhatian konsumen dan meningkatkan penjualan.</li>
+          <li><strong>Kontraktor Interior / Pelaksana Desain</strong><br> Mengawasi pelaksanaan proyek interior dari desain hingga realisasi di lapangan.</li>
+          <li><strong>Desainer Pameran (Exhibition Designer)</strong><br> Membuat konsep dan tata letak ruang pameran, event, atau galeri seni.</li>
+          <li><strong>Lighting Designer</strong><br> Spesialis pencahayaan yang menyesuaikan suasana dan fungsi ruang dengan efek cahaya yang tepat.</li>
+          <li><strong>3D Artist / Interior Visualizer</strong><br> Membuat model 3D dan rendering interior untuk presentasi klien atau promosi proyek desain.</li>
+          <li><strong>Akademisi dan Peneliti Desain</strong><br> Menjadi dosen, pengajar, atau peneliti di bidang desain interior dan arsitektur.</li>
+          <li><strong>Wirausaha di Bidang Desain dan Dekorasi</strong><br> Mendirikan studio interior, toko furnitur, atau usaha dekorasi ruangan profesional.</li>
+        </ul>
+
+        <p><strong>Kampus Negeri (PTN) yang Memiliki Jurusan Desain Interior</strong></p>
+        <ul>
+          <li>Institut Teknologi Bandung (ITB)</li>
+          <li>Institut Seni Indonesia (ISI) Yogyakarta</li>
+          <li>Institut Seni Indonesia (ISI) Denpasar</li>
+          <li>Institut Seni Indonesia (ISI) Surakarta</li>
+          <li>Universitas Sebelas Maret (UNS)</li>
+          <li>Institut Teknologi Sepuluh Nopember (ITS)</li>
+          <li>Universitas Negeri Malang (UM)</li>
+          <li>Universitas Negeri Surabaya (UNESA)</li>
+          <li>Universitas Negeri Semarang (UNNES</li>
+          <li>Institut Seni Budaya Indonesia (ISBI) Bandung</li>
+          <li>Universitas Sumatera Utara (USU)</li>
+          <li>Institut Teknologi Sumatera (ITERA)</li>
+        </ul>
+
+        <p><strong>Kampus Swasta (PTS) yang Memiliki Jurusan Desain Interior</strong></p>
+        <ul>
+          <li>Universitas Tarumanagara (UNTAR)</li>
+          <li>Universitas Trisakti</li>
+          <li>Universitas Pelita Harapan (UPH)</li>
+          <li>Universitas Bina Nusantara (Binus University)</li>
+          <li>Universitas Kristen Petra (UK Petra)</li>
+          <li>Universitas Ciputra Surabaya (UC)</li>
+          <li>Universitas Esa Unggul (UEU)</li>
+          <li>Universitas Pembangunan Jaya (UPJ)</li>
+          <li>Universitas Kristen Maranatha (UKM)</li>
+          <li>Universitas Mercu Buana (UMB)</li>
+          <li>Universitas Komputer Indonesia (UNIKOM)</li>
+          <li>Universitas Katolik Parahyangan (UNPAR)</li>
+          <li>Universitas Multimedia Nusantara (UMN)</li>
+          <li>Institut Desain & Bisnis Bali (IDB Bali)</li>
+          <li>Sekolah Tinggi Desain InterStudi (STDI)</li>
+        </ul>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+		<div class="card">
+ <img src="./seni/desain%20produk.jpg" alt="Desain Produk" width="720" height="473">
+  <div class="card-body">
+    <h4 class="card-title">Desain Produk</h4>
+    <p class="card-text">Desain Produk: program studi yang fokus pada perancangan dan pengembangan produk inovatif, fungsional, dan ergonomis untuk memenuhi kebutuhan manusia, dengan mempertimbangkan aspek estetika, teknik, sosial, ekonomi, dan lingkungan</p>
+    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPRODUK">Lihat Kampus</a>
+  </div>
+</div>
+
+<div class="modal fade" id="modalPRODUK" tabindex="-1" aria-labelledby="modalPRODUKLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">      
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalPRODUKLabel">Desain Produk</h5> 
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Deskripsi:</strong> Desain Produk: program studi yang fokus pada perancangan dan pengembangan produk inovatif, fungsional, dan ergonomis untuk memenuhi kebutuhan manusia, dengan mempertimbangkan aspek estetika, teknik, sosial, ekonomi, dan lingkungan</p>
+
+        <p><strong>Prospek Kerja Lulusan Desain Produk</strong></p>
+        <ul>
+          <li><strong>Product Designer (Desainer Produk)</strong><br> Merancang berbagai produk fisik, mulai dari perabot, peralatan elektronik, hingga kendaraan.</li>
+          <li><strong>Industrial Designer</strong><br> Mengembangkan produk industri dalam skala besar dengan memperhatikan fungsi, estetika, dan efisiensi produksi.</li>
+          <li><strong>Furniture Designer</strong><br> Mendesain perabot dan dekorasi interior dengan estetika dan ergonomi tinggi.</li>
+          <li><strong>Automotive Designer</strong><br> Terlibat dalam desain eksterior dan interior kendaraan bermotor seperti mobil atau motor.</li>
+          <li><strong>Packaging Designer</strong><br> Merancang kemasan produk yang menarik dan fungsional untuk meningkatkan nilai jual.</li>
+          <li><strong>UX/UI Designer (untuk produk digital)</strong><br> Mendesain pengalaman pengguna dalam produk digital seperti aplikasi dan website.</li>
+          <li><strong>3D Modeler / Product Visualizer</strong><br> Membuat visualisasi 3D dan prototype digital untuk presentasi desain produk.</li>
+          <li><strong>Desainer Inovasi / R&D Specialist</strong><br> Bekerja di bagian riset dan pengembangan produk di perusahaan teknologi atau manufaktur.</li>
+          <li><strong>Wirausaha Produk Kreatif</strong><br> Mendirikan bisnis desain seperti brand furnitur, alat rumah tangga, fashion tech, atau start-up berbasis desain.</li>
+          <li><strong>Konsultan Desain dan Branding Produk</strong><br> Membantu perusahaan menciptakan identitas produk dan strategi visual yang kuat.</li>
+          <li><strong>Akademisi / Peneliti Desain</strong><br> Menjadi dosen atau peneliti dalam bidang inovasi desain, ergonomi, dan teknologi material.</li>
+        </ul>
+
+        <p><strong>Kampus Negeri (PTN) yang Memiliki Jurusan Desain Produk</strong></p>
+        <ul>
+          <li>Institut Teknologi Bandung (ITB)</li>
+          <li>Institut Teknologi Sepuluh Nopember (ITS)</li>
+          <li>Universitas Sebelas Maret (UNS)</li>
+          <li>Institut Seni Indonesia (ISI) Yogyakarta</li>
+          <li>Institut Seni Indonesia (ISI) Surakarta</li>
+          <li>Institut Seni Indonesia (ISI) Denpasar</li>
+          <li>Institut Seni Budaya Indonesia (ISBI) Bandung</li>
+          <li>Universitas Negeri Malang (UM)</li>
+          <li>Universitas Negeri Surabaya (UNESA)</li>
+          <li>Universitas Negeri Semarang (UNNES)</li>
+          <li>Universitas Sumatera Utara (USU)</li>
+          <li>Institut Teknologi Sumatera (ITERA)</li>
+        </ul>
+
+        <p><strong>Kampus Swasta (PTS) yang Memiliki Jurusan Desain Produk</strong></p>
+        <ul>
+          <li>Universitas Pelita Harapan (UPH)</li>
+          <li>Universitas Tarumanagara (UNTAR).</li>
+          <li>Universitas Trisakti</li>
+          <li>Universitas Bina Nusantara (Binus University)</li>
+          <li>Universitas Kristen Petra (UK Petra)</li>
+          <li>Universitas Ciputra Surabaya (UC)</li>
+          <li>Universitas Esa Unggul (UEU)</li>
+          <li>Universitas Pembangunan Jaya (UPJ)</li>
+          <li>Universitas Kristen Maranatha (UKM)</li>
+          <li>Universitas Komputer Indonesia (UNIKOM)</li>
+          <li>Universitas Katolik Parahyangan (UNPAR)</li>
+          <li>Institut Desain & Bisnis Bali (IDB Bali)</li>
+          <li>Sekolah Tinggi Desain InterStudi (STDI)</li>
+          <li>Universitas Dian Nuswantoro (UDINUS)</li>
+          <li>Universitas Multimedia Nusantara (UMN)</li>
+        </ul>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+		<div class="card">
+  <img src="./seni/fotografi.jpg" alt="Fotografi" width="720" height="473">
+  <div class="card-body">
+    <h4 class="card-title">Fotografi</h4>
+    <p class="card-text">Fotografi: mempelajari dan mengabadikan bentuk-bentuk serta peristiwa-peristiwa, baik alami maupun buatan, dalam rangka menciptakan bentuk karya seni fotografi yang indah dan mempunyai nilai serta makna yang sesuai dengan nilai budaya dan kepribadian nasional.</p>
+    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalFOTOGRAFI">Lihat Kampus</a>
+  </div>
+</div>
+
+<div class="modal fade" id="modalFOTOGRAFI" tabindex="-1" aria-labelledby="modalFOTOGRAFILabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalFOTOGRAFILabel">Fotografi</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Deskripsi:</strong> Fotografi: mempelajari dan mengabadikan bentuk-bentuk serta peristiwa-peristiwa, baik alami maupun buatan, dalam rangka menciptakan bentuk karya seni fotografi yang indah dan mempunyai nilai serta makna yang sesuai dengan nilai budaya dan kepribadian nasional.</p>
+
+        <p><strong>Prospek Kerja Lulusan Fotografi</strong></p>
+        <ul>
+          <li><strong>Fotografer Profesional</strong><br>Menjadi fotografer di berbagai bidang: fashion, wedding, produk, arsitektur, kuliner, olahraga, atau jurnalistik.</li>
+          <li><strong>Photojournalist (Fotografer Jurnalistik)</strong><br>Bekerja di media massa seperti koran, majalah, atau portal berita untuk mendokumentasikan peristiwa penting.</li>
+          <li><strong>Fashion Photographer</strong><br>Mengambil gambar model, pakaian, dan produk fashion untuk majalah atau kampanye brand.</li>
+          <li><strong>Product / Commercial Photographer</strong><br>Spesialis foto iklan dan promosi produk, mulai dari kosmetik, makanan, hingga otomotif.</li>
+          <li><strong>Event Photographer</strong><br>Meliput acara seperti konser, seminar, festival, atau pernikahan dengan dokumentasi profesional.</li>
+          <li><strong>Wildlife / Landscape Photographer</strong><br>Mengambil gambar alam, hewan liar, atau lanskap untuk media, buku, dan dokumenter.</li>
+          <li><strong>Photographer & Visual Content Creator</strong><br>Membuat konten visual untuk media sosial, brand, atau agensi kreatif.</li>
+          <li><strong>Photo Editor / Retoucher</strong><br>Mengolah hasil foto secara digital agar sesuai dengan standar visual profesional.</li>
+          <li><strong>Videografer / Cinematographer</strong><br>Mengembangkan keterampilan visual menjadi sinematografi untuk film, iklan, atau video konten.</li>
+          <li><strong>Konsultan dan Kurator Fotografi</strong><br>Menilai, mengkurasi, atau menyusun pameran karya foto untuk galeri dan museum.</li>
+          <li><strong>Akademisi / Pengajar Seni Fotografi</strong><br>Mengajar di bidang seni visual, komunikasi, atau desain di lembaga pendidikan tinggi.</li>
+          <li><strong>Wirausaha Kreatif (Studio / Freelance Photographer)</strong><br>Mendirikan studio fotografi, bisnis foto produk, atau agensi dokumentasi acara.</li>
+        </ul>
+
+        <p><strong>Kampus Negeri (PTN) yang Memiliki Jurusan Fotografi</strong></p>
+        <ul>
+          <li>Institut Kesenian Jakarta (IKJ)</li>
+          <li>Institut Seni Indonesia (ISI) Yogyakarta.</li>
+          <li>Institut Seni Indonesia (ISI) Denpasar</li>
+          <li>Institut Seni Indonesia (ISI) Surakarta</li>
+          <li>Institut Seni Budaya Indonesia (ISBI) Bandung</li>
+          <li>Institut Seni Budaya Indonesia (ISBI) - Aceh</li>
+          <li>Universitas Negeri Surabaya (UNESA)</li>
+          <li>Universitas Negeri Makassar (UNM)</li>
+          <li>Universitas Sebelas Maret (UNS)</li>
+          <li>Institut Teknologi Bandung (ITB)</li>
+        </ul>
+
+        <p><strong>Kampus Swasta (PTS) yang Memiliki Jurusan Fotografi</strong></p>
+        <ul>
+          <li>Universitas Multimedia Nusantara (UMN)</li>
+          <li>Universitas TrisaktI</li>
+          <li>Universitas Pelita Harapan (UPH)</li>
+          <li>Universitas Bina Nusantara (Binus University)</li>
+          <li>Universitas Kristen Petra (UK Petra)</li>
+          <li>Universitas Ciputra Surabaya (UC)</li>
+          <li>Universitas Esa Unggul (UEU)</li>
+          <li>Institut Desain & Bisnis Bali (IDB Bali)</li>
+          <li>Institut Kesenian Yogyakarta (IKJOG)</li>
+          <li>Sekolah Tinggi Desain InterStudi (STDI)</li>
+          <li>LSPR Institute of Communication and Business.</li>
+          <li>Universitas Pembangunan Jaya (UPJ)</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+		<div class="card">
+  <img src="./seni/film%20dan%20televisi.jpg" alt="Film dan Televisi" width="720" height="473">
+  <div class="card-body">
+    <h4 class="card-title">Film dan Televisi</h4>
+    <p class="card-text">Film dan Televisi: program studi yang membekali mahasiswa dengan pengetahuan dan keterampilan teknis serta artistik untuk menciptakan karya audiovisual di berbagai media, seperti film, televisi, dan konten digital.</p>
+    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalFILM">Lihat Kampus</a>
+  </div>
+</div>
+
+<div class="modal fade" id="modalFILM" tabindex="-1" aria-labelledby="modalFILMLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalFILMLabel">Film dan Televisi</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Deskripsi:</strong> Film dan Televisi: program studi yang membekali mahasiswa dengan pengetahuan dan keterampilan teknis serta artistik untuk menciptakan karya audiovisual di berbagai media, seperti film, televisi, dan konten digital.</p>
+
+        <p><strong>Prospek Kerja Lulusan Film dan Televisi</strong></p>
+        <ul>
+          <li><strong>Sutradara (Director)</strong><br>Mengarahkan seluruh proses pembuatan film, serial, atau iklan agar sesuai dengan visi dan naskah.</li>
+          <li><strong>Penulis Skenario (Screenwriter)</strong><br>Menulis naskah film, sinetron, web series, atau program televisi dengan struktur cerita yang menarik.</li>
+          <li><strong>Produser Film / TV</strong><br>Mengelola aspek keuangan, logistik, dan koordinasi dalam proses produksi film atau program TV.</li>
+          <li><strong>Sinematografer / Director of Photography (DOP)</strong><br>Bertanggung jawab pada aspek visual film — pengaturan kamera, pencahayaan, dan komposisi gambar.</li>
+          <li><strong>Editor Video / Film Editor</strong><br>Mengedit hasil rekaman menjadi karya yang utuh, mengatur ritme, transisi, dan efek visual.</li>
+          <li><strong>Sound Designer / Audio Engineer</strong><br>Mengolah suara, efek, dan musik agar memperkuat suasana dalam film atau acara televisi.</li>
+          <li><strong>Art Director / Production Designer</strong><br>Mendesain tampilan visual (set, kostum, properti) agar sesuai dengan tema cerita.</li>
+          <li><strong>Animator atau Motion Graphic Artist</strong><br>Membuat animasi atau efek grafis untuk film, iklan, dan televisi.</li>
+          <li><strong>Jurnalis Televisi / Reporter / Presenter</strong><br>Meliput berita, menjadi pembawa acara, atau produser program di stasiun TV.</li>
+          <li><strong>Kritikus / Kurator Film</strong><br>Menganalisis dan menilai karya film untuk media, festival, atau lembaga budaya.</li>
+          <li><strong>Videografer dan Konten Kreator</strong><br>Membuat konten visual untuk YouTube, platform digital, hingga media sosial brand.</li>
+          <li><strong>Dosen atau Pengajar Perfilman</strong><br>Mengajar di universitas atau lembaga pendidikan perfilman dan media.</li>
+        </ul>
+
+        <p><strong>Kampus Negeri (PTN)</strong></p>
+        <ul>
+          <li>Institut Kesenian Jakarta (IKJ)</li>
+          <li>Institut Seni Indonesia (ISI) Yogyakarta</li>
+          <li>Institut Seni Indonesia (ISI) Denpasar</li>
+          <li>Institut Seni Indonesia (ISI) Surakarta</li>
+          <li>Institut Seni Budaya Indonesia (ISBI) Bandung</li>
+          <li>Institut Seni Budaya Indonesia (ISBI) Aceh</li>
+          <li>Universitas Padjadjaran (UNPAD)</li>
+          <li>Universitas Airlangga (UNAIR)</li>
+          <li>Universitas Sebelas Maret (UNS)</li>
+          <li>Universitas Negeri Surabaya (UNESA)</li>
+          <li>Universitas Negeri Makassar (UNM)</li>
+          <li>Institut Teknologi Bandung (ITB)</li>
+        </ul>
+
+        <p><strong>Kampus Swasta (PTS)</strong></p>
+        <ul>
+          <li>Universitas Multimedia Nusantara (UMN)</li>
+          <li>Universitas Bina Nusantara (Binus).</li>
+          <li>Universitas Tarumanagara (UNTAR)</li>
+          <li>Universitas Trisakti.</li>
+          <li>Universitas Pelita Harapan (UPH)</li>
+          <li>Universitas Kristen Petra (UK Petra)</li>
+          <li>Universitas Ciputra Surabaya (UC)</li>
+          <li>Institut Kesenian Yogyakarta (IKJOG)</li>
+          <li>Universitas Pembangunan Jaya (UPJ)</li>
+          <li>LSPR Institute of Communication and Business</li>
+          <li>London School of Public Relations (LSPR)</li>
+          <li>Universitas Esa Unggul (UEU)</li>
+          <li>Universitas Sahid (USAHID)</li>
+          <li>Institut Desain & Bisnis Bali (IDB Bali)</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+		<div class="card">
+  <img src="./seni/seni%20kriya.webp" alt="Seni Kriya" width="720" height="473">
+  <div class="card-body">
+    <h4 class="card-title">Seni Kriya</h4>
+    <p class="card-text">Program studi seni yang fokus pada pengembangan keterampilan membuat karya seni kerajinan tangan dengan nilai estetika dan nilai fungsional, seperti pada media kayu, logam, tekstil, dan keramik.</p>
+    <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalKRIYA">Lihat Kampus</a>
+  </div>
+</div>
+
+<div class="modal fade" id="modalKRIYA" tabindex="-1" aria-labelledby="modalKRIYALabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalKRIYALabel">Seni Kriya</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Deskripsi:</strong> Program studi seni yang fokus pada pengembangan keterampilan membuat karya seni kerajinan tangan dengan nilai estetika dan nilai fungsional, seperti pada media kayu, logam, tekstil, dan keramik.</p>
+
+        <p><strong>Prospek Kerja Lulusan Seni Kriya</strong></p>
+        <ul>
+          <li><strong>Perajin / Art Craft Designer</strong><br>Membuat karya kriya seperti keramik, batik, tenun, ukiran, perhiasan, atau anyaman dengan nilai estetika tinggi.</li>
+          <li><strong>Desainer Produk Kriya</strong><br>Mendesain produk fungsional yang menggabungkan unsur seni dan teknologi, misalnya furnitur, aksesori, atau dekorasi interior.</li>
+          <li><strong>Seniman Kriya (Artisan / Craft Artist)</strong><br>Berkarya secara independen, mengikuti pameran seni, dan menjual hasil karyanya di galeri atau pasar seni.</li>
+          <li><strong>Pengrajin Industri Kreatif</strong><br>Bekerja di industri kerajinan tangan, souvenir, fashion, atau dekorasi rumah yang berbasis budaya dan desain lokal.</li>
+          <li><strong>Desainer Tekstil / Batik / Tenun</strong><br>Mendesain motif, pola, dan produk tekstil tradisional maupun modern.</li>
+          <li><strong>Konsultan Desain dan Dekorasi Interior</strong><br>Mengembangkan desain interior yang menonjolkan unsur kriya dan budaya Nusantara.</li>
+          <li><strong>Kurator atau Pengelola Galeri Seni</strong><br>Mengelola pameran seni kriya dan membantu seniman memasarkan karyanya.</li>
+          <li><strong>Wirausaha Seni dan Kerajinan (Creativepreneur)</strong><br>Membuka usaha kriya, studio desain, atau toko produk lokal handmade.</li>
+          <li><strong>Dosen / Pengajar Seni Kriya</strong><br>Mengajar di perguruan tinggi seni atau sekolah kejuruan yang berfokus pada desain dan kriya.</li>
+          <li><strong>Desainer Mode (Fashion Accessories Designer)</strong><br>Mengembangkan aksesori berbahan logam, kulit, atau kain untuk industri fashion.</li>
+        </ul>
+
+        <p><strong>Kampus Negeri (PTN) yang Memiliki Jurusan Seni Kriya</strong></p>
+        <ul>
+          <li>Institut Teknologi Bandung (ITB)</li>
+          <li>Institut Seni Indonesia (ISI) Yogyakarta</li>
+          <li>Institut Seni Indonesia (ISI) Denpasar</li>
+          <li>Institut Seni Indonesia (ISI) Surakarta</li>
+          <li>Institut Seni Budaya Indonesia (ISBI) Bandung</li>
+          <li>Institut Seni Budaya Indonesia (ISBI) Aceh</li>
+          <li>Institut Seni Budaya Indonesia (ISBI) Tanah Papua</li>
+          <li>Universitas Negeri Semarang (UNNES)</li>
+          <li>Universitas Negeri Surabaya (UNESA)</li>
+          <li>Universitas Negeri Makassar (UNM)</li>
+          <li>Universitas Negeri Malang (UM)</li>
+          <li>Universitas Sebelas Maret (UNS)</li>
+          <li>Universitas Negeri Yogyakarta (UNY)</li>
+        </ul>
+
+        <p><strong>Kampus Swasta (PTS)</strong></p>
+        <ul>
+          <li>Institut Kesenian Jakarta (IKJ)</li>
+          <li>Universitas Trisakti.</li>
+          <li>Universitas Kristen Petra (UK Petra)</li>
+          <li>Universitas Tarumanagara (UNTAR)</li>
+          <li>Universitas Ciputra Surabaya (UC)</li>
+          <li>Universitas Pelita Harapan (UPH)</li>
+          <li>Universitas Esa Unggul (UEU)</li>
+          <li>Institut Desain dan Bisnis Bali (IDB Bali)</li>
+          <li>Universitas Pembangunan Jaya (UPJ)</li>
+          <li>Universitas Kristen Maranatha (UKM)</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+     {
+      background-color: #2F5755;
+      color: #F4E9D7;
+    }
+    .pagination .page-link {
+      background-color: #2F5755;
+      border: 1px solid #2F5755;
+      color: #F4E9D7;
+    }
+    .pagination .page-link:hover {
+      background-color: #F4E9D7;
+      color: #2F5755;
+    }
+    .pagination .page-item.active .page-link {
+      background-color: #F4E9D7;
+      color: #2F5755;
+      border-color: #2F5755;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-5">
+  <ul class="pagination justify-content-center">
+    <li class="page-item"><a class="page-link" href="index.html">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="soshum.html">1</a></li>
+    <li class="page-item"><a class="page-link" href="saintek.html">2</a></li>
+    <li class="page-item active"><a class="page-link" href="seni.html">3</a></li>
+	<li class="page-item"><a class="page-link" href="tmb.html">Next</a></li>
+  </ul>
+</div>
+	
+<p></p>
+<p style="color: #F4E9D7">&nbsp;</p>
+</body>
+</html>
+
+

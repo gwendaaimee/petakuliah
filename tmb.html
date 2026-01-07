@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tes Minat dan Bakat</title>
+<link rel="icon" type="image/x-icon" href="./logo.png">
+<style type="text/css">
+body {
+    background-color: #F4E9D7;
+    font-family: Noto-Serif;
+    color: #334443;
+}
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		
+
+  <style>
+    .custom-navbar {
+      background-color: #F4E9D7 !important;
+	  font-family: 'Noto Serif', serif !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .custom-navbar .navbar-brand {
+      color: #2F5755 !important;
+      font-weight: 700;
+    }
+
+    .custom-navbar .nav-link {
+      color: #2F5755 !important;
+      transition: all .18s ease;
+    }
+
+    .custom-navbar .nav-link:hover {
+      text-decoration: underline;
+      color: #2F5755 !important;
+    }
+
+    .custom-navbar .dropdown-menu {
+      background-color: #F4E9D7;
+      border: none;
+    }
+
+    .custom-navbar .dropdown-item {
+      color: #2F5755 !important;
+    }
+
+    .custom-navbar .dropdown-item:hover {
+      background-color: #e7d9c5;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+	<!-- NAVBAR -->
+<body>
+  <nav class="navbar navbar-expand-sm custom-navbar">
+  <a class="navbar-brand" href="index.html">
+    <img src="./logo.png" alt="logo" style="width:40px;">
+  </a>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Beranda</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Jurusan
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbardrop">
+            <a class="dropdown-item" href="soshum.html">Sosial dan Humaniora</a>
+            <a class="dropdown-item" href="saintek.html">Sains dan Teknologi</a>
+            <a class="dropdown-item" href="seni.html">Seni dan Desain</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tmb.html">Tes Minat Bakat</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">Tentang Kami</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+	<style>
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #F4E9D7;
+      color: #2F5755;
+    }
+
+    .intro-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 10%;
+      min-height: 100vh;
+      flex-wrap: wrap;
+    }
+
+    .intro-content {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .intro-text {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    .intro-text h1 {
+	  font-family: 'Noto Serif', serif !important;
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #2F5755;
+    }
+
+    .intro-text p {
+	  font-family: 'Noto Serif', serif !important;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: #3C3C3C;
+    }
+
+	 a.button {
+	  font-family: 'Noto Serif', serif !important;
+	  display: inline-block;
+	  background-color: #2F5755;
+	  color: #F4E9D7;
+	  padding: 12px 30px;
+	  border-radius: 6px;
+	  font-weight: bold;
+	  text-decoration: none;
+	  transition: 0.3s;
+	}
+
+	a.button:hover {
+	  text-decoration: underline;
+	  background-color: #2F5755;
+	  color: #F4E9D7;
+	}
+
+    .intro-image img {
+      width: 420px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    #quiz-section {
+	  font-family: 'Noto Serif', serif !important;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 100px 20px;
+      background-color: white;
+      color: #2F5755;
+      text-align: center;
+    }
+
+    #quiz-section h2 {
+	  font-family: 'Noto Serif', serif !important;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    #quiz-section p {
+	  font-family: 'Noto Serif', serif !important;
+      font-size: 1rem;
+      max-width: 600px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+	
+  <section class="intro-section">
+    <div class="intro-content" style="padding: 100px 10%; background-color: #F4E9D7; color: #2F5755; font-family: Noto Serif;">
+      <div class="intro-text">
+        <h1>Bingung dengan Masa Depan?</h1>
+        <p>Ikuti Tes Minat dan Bakat untuk mengetahui bidang yang paling sesuai dengan dirimu! Temukan jurusan dan karier impianmu dengan mudah dan menyenangkan.</p>
+        <a href="kuis.html" class="button">Mulai Tes</a>
+      </div>
+
+      <div class="intro-image">
+        <img src="./tmb.svg" alt="Tes Minat dan Bakat">
+      </div>
+    </div>
+  </section>
+
+  <section id="about-section" style="padding: 100px 10%; background-color: #F4E9D7; color: #2F5755; font-family: Noto Serif;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <h2 style="font-size: 2rem; margin-bottom: 20px;">Apa Itu Tes Minat dan Bakat?</h2>
+      <p style="font-size: 1.05rem; line-height: 1.8; color: #3C3C3C;">
+        Tes minat dan bakat adalah alat bantu yang dirancang untuk membantumu mengenali potensi diri. 
+        Melalui serangkaian pertanyaan sederhana, kamu bisa memahami kecenderungan minat, gaya berpikir, 
+        serta kemampuan yang dominan dalam dirimu. Hasil tes ini bisa jadi panduan awal untuk memilih jurusan kuliah 
+        atau karier yang paling sesuai.
+      </p>
+      <p style="font-size: 1.05rem; line-height: 1.8; color: #3C3C3C;">
+        Tes ini tidak menilai benar atau salah, melainkan menunjukkan sisi unik dari setiap individu. 
+        Dengan mengenali apa yang kamu sukai dan apa yang kamu bisa, kamu bisa melangkah lebih percaya diri 
+        dalam menentukan arah masa depan.
+      </p>
+    </div>
+  </section>
+
+  <section id="fields-section" style="padding: 100px 10%; background-color: #F4E9D7; color: #2F5755; font-family: Noto Serif;">
+    <div style="max-width: 1000px; margin: 0 auto;">
+      <h2 style="text-align: center; font-size: 2rem; margin-bottom: 60px; color: #2F5755;">
+        Hasil Tes Akan Menunjukkan Bidang Dominanmu
+      </h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+        
+        <div style="background-color: #F4E9D7; border-radius: 10px; padding: 30px;">
+          <h3 style="margin-bottom: 10px;">Sains & Teknologi</h3>
+          <p style="color: #3C3C3C;">Kamu punya kemampuan logis, analitis, dan suka memecahkan masalah. 
+            Cocok di bidang seperti Teknik, Kedokteran, Informatika, atau Sains.</p>
+        </div>
+
+        <div style="background-color: #F4E9D7; border-radius: 10px; padding: 30px;">
+          <h3 style="margin-bottom: 10px;">Sosial & Humaniora</h3>
+          <p style="color: #3C3C3C;">Kamu senang berinteraksi dan memahami perilaku manusia. 
+            Jurusan yang cocok misalnya Psikologi, Hukum, Ekonomi, atau Komunikasi.</p>
+        </div>
+
+        <div style="background-color: #F4E9D7; border-radius: 10px; padding: 30px;">
+          <h3 style="margin-bottom: 10px;">Seni & Desain</h3>
+          <p style="color: #3C3C3C;">Kamu punya imajinasi tinggi dan kepekaan estetika. 
+            Cocok di bidang Desain, Musik, DKV, Teater, atau Perfilman.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer style="background-color: #D97D55; color: white; font-family: 'Noto Serif', serif; padding: 50px 60px;">
+  <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+
+    <div style="width: 300px; margin-bottom: 20px;">
+      <h4>PetaKuliah</h4>
+      <p>
+        Media informasi pendidikan interaktif untuk membantu siswa menemukan
+        jurusan yang sesuai dengan minat dan bakat mereka.
+      </p>
+    </div>
+
+    <div style="width: 300px; margin-bottom: 20px;">
+      <h4>BANDUNG</h4>
+      <p>
+        +62 812-3456-7890<br>
+        SMA Santa Maria 1 Bandung<br>
+        Jl. Bengawan No.6, Cihapit,<br>
+		Kec. Bandung Wetan, Kota Bandung,<br>
+		Jawa Barat 40114
+      </p>
+    </div>
+
+    <div style="width: 300px; margin-bottom: 20px;">
+      <h4>IKUTI KAMI</h4>
+      <a href="https://www.instagram.com/aimeeyy__/" style="margin-right: 10px;"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="24"></a>
+    </div>
+  </div>
+
+  <p style="text-align: center; margin-top: 40px; font-size: 14px;">
+    © 2025 PetaKuliah | Dibuat oleh Gwenda Aimee Winarno
+  </p>
+</footer>
+
+</body>
+</html>
